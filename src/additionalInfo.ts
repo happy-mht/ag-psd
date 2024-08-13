@@ -406,19 +406,19 @@ addHandler(
 			if (i.keyOriginResolution != null) item.keyOriginResolution = i.keyOriginResolution;
 			if (i.keyOriginShapeBBox) {
 				item.keyOriginShapeBoundingBox = {
-					top: parseUnits(i.keyOriginShapeBBox['Top ']),
-					left: parseUnits(i.keyOriginShapeBBox.Left),
-					bottom: parseUnits(i.keyOriginShapeBBox.Btom),
-					right: parseUnits(i.keyOriginShapeBBox.Rght),
+					top: parseUnitsOrNumber(i.keyOriginShapeBBox['Top ']),
+					left: parseUnitsOrNumber(i.keyOriginShapeBBox.Left),
+					bottom: parseUnitsOrNumber(i.keyOriginShapeBBox.Btom),
+					right: parseUnitsOrNumber(i.keyOriginShapeBBox.Rght),
 				};
 			}
 			const rectRadii = i.keyOriginRRectRadii;
 			if (rectRadii) {
 				item.keyOriginRRectRadii = {
-					topRight: parseUnits(rectRadii.topRight),
-					topLeft: parseUnits(rectRadii.topLeft),
-					bottomLeft: parseUnits(rectRadii.bottomLeft),
-					bottomRight: parseUnits(rectRadii.bottomRight),
+					topRight: parseUnitsOrNumber(rectRadii.topRight),
+					topLeft: parseUnitsOrNumber(rectRadii.topLeft),
+					bottomLeft: parseUnitsOrNumber(rectRadii.bottomLeft),
+					bottomRight: parseUnitsOrNumber(rectRadii.bottomRight),
 				};
 			}
 			const corners = i.keyOriginBoxCorners;

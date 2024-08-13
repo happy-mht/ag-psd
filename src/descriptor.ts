@@ -1723,6 +1723,9 @@ export function parsePercentOrAngle(x: DescriptorUnitsValue | undefined) {
 	if (x.units === 'Angle') return x.value / 360;
 	throw new Error(`Invalid units: ${x.units}`);
 }
+export function parseBoxValue() {
+
+}
 
 export function parseUnits({ units, value }: DescriptorUnitsValue): UnitsValue {
 	if (

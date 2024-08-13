@@ -1409,6 +1409,7 @@ export interface LayerAdditionalInfo {
 	// Base64 encoded raw EngineData, currently just kept in original state to support
 	// loading and modifying PSD file without breaking text layers.
 	engineData?: string;
+	compression?: number
 }
 
 export enum LayerCompCapturedInfo {
@@ -1666,6 +1667,7 @@ export interface Psd extends LayerAdditionalInfo {
 	};
 	globalLayerMaskInfo?: GlobalLayerMaskInfo;
 	annotations?: Annotation[];
+	compression?: number
 }
 
 export interface ReadOptions {

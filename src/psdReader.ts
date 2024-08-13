@@ -690,6 +690,7 @@ function createImageDataBitDepth(width: number, height: number, bitDepth: number
 
 function readImageData(reader: PsdReader, psd: Psd, options: ReadOptionsExt) {
 	const compression = readUint16(reader) as Compression;
+	psd.compression = compression
 	const bitsPerChannel = psd.bitsPerChannel ?? 8;
 
 	if (supportedColorModes.indexOf(psd.colorMode!) === -1)
